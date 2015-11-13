@@ -57,7 +57,7 @@ void setup(void) {
 
   // Start Server
   YunServer server;
-  server.listenOnLocalhost();
+//  server.listenOnLocalhost();
   server.begin();
 }
 
@@ -86,16 +86,16 @@ void loop(void) {
       Serial.print("DeviceID #");Serial.print(cardid);
       Serial.print(" in range");Serial.println("");
         if (cardid == 73563026) {
-          Serial.print("Gabes Phone");Serial.println("");Serial.println("");
-          inByte = Serial.read();
+          Serial.print("Oyster Card");Serial.println("");Serial.println("");
+//          inByte = Serial.read();
           digitalWrite(10,HIGH);
-          delay(10000);
+          delay(1000);
           digitalWrite(10,LOW);
-          delay(0.001);
+          delay(50);
         }
         else {
           Serial.print("Not recognised device");Serial.println("");Serial.println("");
-          delay(0.001);
+          delay(50);
         }
   }
   else {
